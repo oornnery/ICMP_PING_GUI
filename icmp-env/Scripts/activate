@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="G:\Meu Drive\CODE\GitHub\GitHub\ICMP_PING\icmp-env"
+VIRTUAL_ENV="G:\Meu Drive\CODE\GitHub\ICMP_PING\icmp-env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
