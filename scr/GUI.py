@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import NSEW, NW, Frame, StringVar, Variable, ttk
-import requests
-import socket
+from turtle import update
+import __module__ as m
 
 
 class MainICMP(tk.Frame):
@@ -15,7 +15,8 @@ class MainICMP(tk.Frame):
 
         ############ VARIAVEIS DOS MODULOS ########## 
 
-        self.ip = MyIP()
+        self.ip = m.MyIP()
+
         self.row = {"row":0}
         self.ping_var = {
             "HOST": [],
@@ -38,16 +39,18 @@ class MainICMP(tk.Frame):
         label2 = tk.Label(self.frame1, text=f"IP Public: {self.ip.IP_Public()}", width=20, height=2, font=('Arial 10 bold'))
         label2.grid(row=0, column=1, padx=5, pady=10)
 
-        label3 = tk.Label(self.frame1, text="Hora: 12:42:52", width=15, height=2, font=('Arial 10 bold'))
+        label3 = tk.Label(self.frame1, text=f"Hora: {self.ip.hora_atual()}", width=15, height=2, font=('Arial 10 bold'))
         label3.grid(row=0, column=2, padx=5, pady=10)
+
+        label3.after(1000, self.__label_ip_time)
 
 
     def __label_entry_ping(self):
         ######### LABEL PING ###########
         r = self.row["row"]
-        self.host_var = StringVar()
-        self.size_var = StringVar()
-        self.qtd_var = StringVar()
+        self.host_var = self.ping_var["HOST"].append(StringVar())
+        self.size_var = self.ping_var["HOST"].append(StringVar())
+        self.qtd_var = self.ping_var["HOST"].append(StringVar())
         
         
         label_host = tk.Label(self.labelframe1, text="HOST:")
@@ -102,22 +105,6 @@ class MainICMP(tk.Frame):
 
         self.grid(row=0, column=0)
 
-
-class MyIP():
-    # Retorna o IP publico. 
-    def IP_Public(self):
-        return requests.get('http://meuip.com/api/meuip.php').text
-         
-
-
-    # Retorna o IP gateway
-    def IP_Gateway(self):
-        pass
-
-
-    # Retorna o IP do host
-    def IP_Host(self):
-        return socket.gethostbyname(socket.gethostname())
 
 
 class App(tk.Tk):
