@@ -1,0 +1,16 @@
+portais = {
+    'Portal 1': 'proxy.idtbrasilhosted.com',
+    'Portal 2': 'proxy2.idtbrasilhosted.com',
+    'Portal 3': 'proxy3.idtbrasilhosted.com',
+    'Portal 4': 'proxy4.idtbrasilhosted.com',
+    'Portal 5': 'proxy5.idtbrasilhosted.com',
+    'Portal 6': 'proxy6.idtbrasilhosted.com',
+    'Portal 7': 'proxy7.idtbrasilhosted.com',
+    'Portal 8': 'proxy8.idtbrasilhosted.com',
+    'Portal 9': 'proxy9.idtbrasilhosted.com',
+    'Portal 10': 'proxy10.idtbrasilhosted.com',
+    'Portal 11': 'proxy11.idtbrasilhosted.com',
+    'Portal 12': 'proxy12.idtbrasilhosted.com',
+    'Portal 13': 'proxy13.idtbrasilhosted.com',
+    'Portal 14': 'proxy14.idtbrasilhosted.com',
+}
